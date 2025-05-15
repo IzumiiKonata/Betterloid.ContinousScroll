@@ -48,7 +48,7 @@ namespace ContinuousScroll
             }
             catch (Exception ex)
             {
-                MessageBoxDeliverer.GeneralError("An error occured while setting the color of the waveforms ! " + ex.GetType().ToString() + " : " + ex.Message);
+                MessageBoxDeliverer.GeneralError("An error occured while starting up the plugin ! " + ex.GetType().ToString() + " : " + ex.Message);
             }
         }
     }
