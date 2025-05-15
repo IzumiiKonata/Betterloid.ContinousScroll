@@ -20,40 +20,6 @@ namespace ContinuousScroll
 {
     public class ContinuousScroll : IPlugin
     {
-        
-        readonly Stopwatch stopwatch = Stopwatch.StartNew();
-
-        long lastNano = 0L;
-        double frameDelta = 0.0;
-
-        public void calcDelta()
-        {
-            frameDelta = ((stopwatch.Elapsed.Ticks * 100) - lastNano) / 10000000.0;
-            lastNano = stopwatch.Elapsed.Ticks * 100;
-        }
-
-        public double lerp(double d, double e, double f)
-        {
-            return e + d * (f - e);
-        }
-
-        public double interpBezier(double startValue, double endValue,
-                                      double fraction)
-        {
-            bool increasing = startValue < endValue;
-
-            double result = lerp(frameDelta * 0.5 * fraction, startValue, endValue);
-
-            if (increasing)
-            {
-                return Math.Min(endValue, result);
-            }
-            else
-            {
-                return Math.Max(endValue, result);
-            }
-
-        }
 
         public void Startup()
         {
