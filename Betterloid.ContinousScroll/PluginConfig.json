@@ -1,0 +1,11 @@
+{
+  "PluginActive": "true",
+  "PluginAuthor": "IzumiKonata",
+  "PluginType": "Startup",
+  "PluginAssemblyV5": "netframework4.6/ContinuousScroll.dll",
+  "PluginAssemblyV6": "net6.0-windows/ContinuousScroll.dll",
+  "PluginName": "ContinuousScroll",
+  "PluginVersion": "1.0.0",
+  "PluginNamespace": "ContinuousScroll",
+  "PluginClass": "ContinuousScroll"
+}
